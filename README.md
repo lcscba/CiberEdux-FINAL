@@ -12,7 +12,7 @@
 <img src="img/logo1.png" width="150px">
 
 <!-- Substitua o seguinte parágrafo por um resumo do seu projeto: -->
-Este projeto tem por objetivo criar um controle de entrada e saída de Pessoas com usuarios devidamente cadastrados. O controle é realizado após o login, sendo capturada o dia/mês/ano - hora:minuto:segundo da entrada ou saída do usuario, que deve estar logado na internet local.
+Este projeto tem por objetivo criar um controle de entrada e saída de Pessoas da "HIGH SCHOOL TATAGLIA - UNIDADE CUIABÁ", com usuarios devidamente cadastrados. O controle é realizado após o login, sendo capturada o dia/mês/ano - hora:minuto:segundo da entrada ou saída do usuario, que deve estar logado na internet local.
 
 ## Documentação
 
