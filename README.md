@@ -6,13 +6,13 @@
 
 **Este projeto foi desenvolvido como atividade final do curso de capacitação em Python da Cyber Edux, realizado de setembro de 2023 até março de 2024. Para mais informações, consulte o [enunciado](ENUNCIADO.md).**
 
-# Nome do Projeto
+# LoginPonto
 
 <!-- Substitua a seguinte imagem por uma logo do seu projeto -->
 <img src="img/logo1.png" width="150px">
 
 <!-- Substitua o seguinte parágrafo por um resumo do seu projeto: -->
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Este projeto tem por objetivo criar um controle de entrada e saída de Pessoas com usuarios devidamente cadastrados. O controle é realizado após o login, sendo capturada o dia/mês/ano - hora:minuto:segundo da entrada ou saída do usuario, que deve estar logado na internet local.
 
 ## Documentação
 
@@ -24,4 +24,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- Coloque seu nome, uma foto sua e uma pequena bio sobre você na seguinte tabela: -->
 |  |  |
 |:-------------:|:------------------------------------------------------------:|
-|  <img src="img/profilepic.png" width="150px"></br> **Nome do Autor** | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. |
+|  <img src="img/profilepic.png" width="150px"></br> **LUCAS G SANTOS** | Uma alma inquieta e apaixonada pela vida. Movido pela curiosidade e pela sede de conhecimento, estou sempre em busca de novas experiências e desafios. Como desenvolvedor, encontro realização na exploração das fronteiras do meu campo e na criação de soluções inovadoras. Minha jornada é moldada pela minha dedicação à excelência e ao crescimento pessoal, sempre buscando superar limites e alcançar novos patamares de realização. Com um coração aberto e mente receptiva, estou pronto para enfrentar os altos e baixos da vida com coragem e determinação. Venha comigo enquanto exploramos juntos as maravilhas do universo e deixamos nossa marca no mundo. |
