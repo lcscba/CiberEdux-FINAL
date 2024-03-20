@@ -1,0 +1,71 @@
+{% extends "base2.html" %}
+
+{% block title %} CADASTRO {% endblock %}
+
+{% block nav %}
+<a class="nav-link ml-auto text-danger-emphasis" href='/home'>HIGH SCHOOL TATAGLIA - UNIDADE CUIABÁ</a>
+<a class="nav-link" href='/cadastro'>CADASTRAR</a>
+<a class="nav-link active" href='/registro'>--REGISTRAR--</a>
+{% endblock nav %}  
+
+{% block username %} 
+{% if authenticated %}
+<span class="m-5 me-5 text-warning fw-bold fst-italic border border-warning rounded text-center align-middle p-1">
+    {{ username }}   
+</span>
+<a class="btn btn-sm btn-outline-secondary text-success" href='/logout'>Sair</a>
+{% else %}
+<a class="btn btn-sm btn-outline-secondary text-success" href='/login'>Entrar</a>
+{% endif %}
+{% endblock username %}
+
+{% block test %}
+<br>
+<h2 class='border rounded pt-5 sticky-bottom text-danger-emphasis bg-warning-subtle text-center m-auto col-11'> REGISTROS </h2>
+{% endblock test %} 
+
+{% block conteudo %}
+<hr>
+  <div class='shadow mt-3 mb-3 pt-2 container bg-warning-subtle'>
+
+  
+  <div class="d-flex justify-content-center ">
+      <div class="m-2 d-flex align-items-center">
+          <div class="display-1 col-12 text-center text-danger-emphasis">
+            {% if registros %}
+                {% with ultimo_registro=registros.0 %}
+                    <div class="display-1 col-12 text-center text-uppercase text-danger-emphasis">
+                        {% if ultimo_registro.entrada %}Entrada{% else %}Saída{% endif %}
+                    </div>
+                    <div class="display-1 col-12 text-center text-danger-emphasis">
+                        {{ ultimo_registro.datahora|date:'d/m/Y h:i:s a' }}
+                    </div>
+                {% endwith %}
+            {% endif %}
+
+          </div>
+      </div> 
+  </div>
+
+
+    {% if username == pessoa.cpf %}
+  <div class="row">
+      <div class="col-12">
+          <div class="d-flex justify-content-center align-items-center">
+              <div class="display-6 text-center">
+                  <div class='font-weight-bold text-uppercase'>{{ pessoa.cpf }} - {{ pessoa.nome }}</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    {% endif %}
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+    <a class='btn btn-primary text-center col-md-4 m-3' href='/registro_confirmado'>VERIFICAR REGISTROS</a>
+</div>
+<div class="d-flex justify-content-center align-items-center">
+    <a class='btn btn-outline-danger text-center col-md-4 m-3' href='/logout'>FINALIZAR</a>
+</div>
+{% endblock conteudo %}

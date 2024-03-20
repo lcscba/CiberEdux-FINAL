@@ -1,0 +1,111 @@
+{% extends "base2.html" %}
+
+{% block title %} CADASTRO {% endblock %}
+{% block nav %}
+<a class="nav-link ml-auto text-danger-emphasis" href='/home'>HIGH SCHOOL TATAGLIA - UNIDADE CUIABÁ</a>
+
+<a class="nav-link" href='/cadastro'>CADASTRAR</a>
+<a class="nav-link active" href='/registro'>--REGISTRAR--</a>
+{% endblock nav %}  
+{% block username %} 
+{% if authenticated %}
+<span class="m-5 me-5 text-warning fw-bold fst-italic border border-warning rounded text-center align-middle p-1">
+    {{ username }}   
+</span>
+<a class="btn btn-sm btn-outline-secondary text-success" href='/logout'>Sair</a>
+{% else %}
+<a class="btn btn-sm btn-outline-secondary text-success" href='/login'>Entrar</a>
+{% endif %}
+{% endblock username %}
+{% block test %}
+<br>
+<h2 class='border rounded pt-5 sticky-bottom text-danger-emphasis bg-warning-subtle text-center m-auto col-11'> REGISTROS </h2>
+{% endblock test %} 
+{% block conteudo %}
+<hr>
+<div>
+    <h2 class=' text-center text-uppercase m-auto col-12'> {{ pessoa.nome }} </h2>
+</div>
+<hr>
+<div class='container '>
+    <div class='row justify-content-center'>
+        <div class='col-md-12 m-auto border rounded shadow p-2 bg-warning-subtle bg-gradient'>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label for="inputNome" class="form-label">Nome Completo</label>
+                    <p type="text" class="form-control text-uppercase" id="formGroupExampleInput" placeholder="  {{ pessoa.nome }}">  {{ pessoa.nome }}</p>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputcpf" class="form-label">CPF</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">  {{ pessoa.cpf }}</p>
+                </div>
+                <div class="col-md-2">
+                    <label for="data" class="form-label">Data de Nascimento</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">{{ pessoa.nascimento|date:'d/m/Y' }}</p>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputtelefone" class="form-label">Telefone</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">  {{ pessoa.telefone }}</p>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputtelefone" class="form-label">Email</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">  {{ user.email }}</p>
+                </div>      
+                <div class="col-4">
+                    <label for="inputAddress" class="form-label">Endereço - Rua</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">  {{ pessoa.enderecos.endereco }}</p>
+                </div>
+                <div class="col-1">
+              
+                  <label for="inputAddress" class="form-label">Número</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">  {{ pessoa.enderecos.numero }}</p>
+                </div>
+                <div class="col-3">        
+                    <label for="inputAddress2" class="form-label">Complemento</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">  {{ pessoa.enderecos.complemento }}</p>
+                </div>        
+                <div class="col-md-2">
+                    <label for="inputCity" class="form-label">Cidade</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">  {{ pessoa.enderecos.cidade }}</p>
+                </div>
+                <div class="col-md-1">
+                    <label for="inputState" class="form-label">Estado</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">  {{ pessoa.enderecos.estado }}</p>
+                </div>
+                <div class="col-md-1">
+                    <label for="inputZip" class="form-label">País</label>
+                    <p type="text" class="form-control" id="formGroupExampleInput" placeholder="">  {{ pessoa.enderecos.pais }}</p>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>      
+
+<hr>
+
+<main class="container border me-5 mb-5 rounded shadow p-3">
+    
+    <table class="table mb-6 text-center">
+        <thead>
+            <tr>
+                <th scope="col">ENTRADA</th>
+                <th scope="col">SAÍDA</th>
+                <th scope="col">DATA</th>
+                <th scope="col">HORA</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reg in registros %}
+            <tr>
+              <td>{% if reg.entrada %}Entrada{% endif %}</td>
+              <td>{% if not reg.entrada %}Saída{% endif %}</td>
+              <td>{{ reg.datahora|date:'d/m/Y' }}</td>
+              <td>{{ reg.datahora|date:'H:i:s' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</main>
+
+
+{% endblock conteudo %}
