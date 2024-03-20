@@ -1,5 +1,7 @@
 # Instruções de uso
 
+PROJETO: LOGINPONTO - "HIGH SCHOOL TATAGLIA - UNIDADE CUIABÁ"
+
 Para utilizar este projeto você deve executar o projeto Django;
 
 Na página inicial você verá a barra de navegação, que contêm a pagina inicial, o cadastro, o registro e o login;
